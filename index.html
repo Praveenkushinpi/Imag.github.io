@@ -1,1 +1,38 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Retro Image Editor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="toolbar">
+    <h1 class="title">Retro Image Editor</h1>
+    <button id="upload-btn">Upload Image</button>
+    <input type="file" id="upload-input" accept="image/*" style="display: none;">
+    <button id="grayscale-btn">Grayscale</button>
+    <button id="sepia-btn">Sepia</button>
+    <button id="invert-btn">Invert</button>
+    <button id="blur-btn">Blur</button>
+    <label>
+      Brightness:
+      <input type="range" id="brightness" min="-100" max="100" value="0">
+    </label>
+    <label>
+      Contrast:
+      <input type="range" id="contrast" min="-100" max="100" value="0">
+    </label>
+    <button id="add-emoji-btn">Add Emoji</button>
+    <input type="text" id="emoji-picker" maxlength="2" placeholder="😊">
+    <button id="add-text-btn">Add Text</button>
+    <input type="text" id="text-input" placeholder="Enter text">
+    <button id="doodle-btn">Doodle</button>
+    <button id="reset-btn">Reset</button>
+    <button id="download-btn">Download</button>
+  </div>
+  <div class="canvas-container">
+    <canvas id="image-canvas"></canvas>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
